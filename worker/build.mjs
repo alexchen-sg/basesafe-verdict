@@ -1,11 +1,11 @@
 // Bundle the Worker (worker.mjs + scorer-core + viem) into dist/worker.mjs.
 import * as esbuild from "esbuild";
 await esbuild.build({
-  entryPoints: ["src/worker.mjs"],
+  entryPoints: ["worker/src/worker.mjs"],
   bundle: true,
   format: "esm",
   platform: "neutral",
-  outfile: "dist/worker.mjs",
+  outfile: "worker/dist/worker.mjs",
   minify: false,
   logLevel: "info",
   // viem's WebSocket transport (unused by the scorer) pulls in Node-only `ws`;

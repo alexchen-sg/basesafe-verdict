@@ -5,12 +5,13 @@
 # deploy command `npx wrangler deploy`. No build output is required for
 # deploy — wrangler bundles worker/src/worker.mjs itself; `npm run build`
 # only rebuilds the local esbuild bundle (worker/dist/worker.mjs) for parity
-# checks. Account: cloudflare-alexchen (5cc7c164728399ac250b8a0087c74d88).
+# checks. Account: alexchen4eci@proton.me (c026093d82a240464502142dba6f44eb)
+# — reached via GitHub SSO 2026-11-25 (email login Turnstile-blocked).
 
 name = "basesafe-verdict"
 main = "worker/src/worker.mjs"
 compatibility_date = "2026-11-24"
-account_id = "5cc7c164728399ac250b8a0087c74d88"
+account_id = "c026093d82a240464502142dba6f44eb"
 
 [ai]
 binding = "AI"
