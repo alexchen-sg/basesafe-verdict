@@ -1,0 +1,1 @@
+{"description":"BaseSafe Verdict — deterministic Base token safety verdict, paid per call via x402 ($0.02 USDC)","devDependencies":{"esbuild":"^0.28.2","wrangler":"^4"},"name":"basesafe-verdict","private":true,"scripts":{"build":"node worker/build.mjs","deploy":"wrangler deploy","dev":"wrangler dev"},"version":"1.0.0"}

@@ -1,0 +1,20 @@
+# BaseSafe Verdict — Cloudflare Worker
+# x402 paid-per-call ($0.02 USDC on Base). Deployed via Cloudflare Workers
+# Builds: connect this repo in the Cloudflare dashboard (Workers & Pages >
+# basesafe-verdict > Settings > Build), build command `npm run build`,
+# deploy command `npx wrangler deploy`. No build output is required for
+# deploy — wrangler bundles worker/src/worker.mjs itself; `npm run build`
+# only rebuilds the local esbuild bundle (worker/dist/worker.mjs) for parity
+# checks. Account: cloudflare-alexchen (5cc7c164728399ac250b8a0087c74d88).
+
+name = "basesafe-verdict"
+main = "worker/src/worker.mjs"
+compatibility_date = "2026-11-24"
+account_id = "5cc7c164728399ac250b8a0087c74d88"
+
+[ai]
+binding = "AI"
+
+[vars]
+# TIGHTEN_SCAN is NOT set here: Cloudflare runs the full holder/LP scans.
+# (Netlify free tier sets TIGHTEN_SCAN=1 via its own adapter.)
